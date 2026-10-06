@@ -1,0 +1,22 @@
+# docker compose up --build   (then: docker compose exec server npm run seed)
+services:
+  mongo:
+    image: mongo:7
+    volumes: [mongo_data:/data/db]
+    ports: ["27017:27017"]
+  ai:
+    build: ./ai-service
+    environment:
+      FORCE_TFIDF: "1"          # skip the large embedding model locally; set 0 to enable it
+    ports: ["8000:8000"]
+  server:
+    build: ./server
+    environment:
+      MONGO_URI: mongodb://mongo:27017/career_ai
+      JWT_SECRET: dev_secret_change_me
+      AI_SERVICE_URL: http://ai:8000
+      CLIENT_URL: http://localhost:5173
+    depends_on: [mongo, ai]
+    ports: ["5000:5000"]
+volumes:
+  mongo_data:

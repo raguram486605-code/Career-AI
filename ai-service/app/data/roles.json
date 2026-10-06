@@ -1,0 +1,172 @@
+{
+ "Full Stack Developer (MERN)": {
+  "required": [
+   "JavaScript",
+   "React",
+   "Node.js",
+   "Express.js",
+   "MongoDB",
+   "REST API",
+   "Git"
+  ],
+  "nice": [
+   "TypeScript",
+   "Docker",
+   "AWS",
+   "Testing"
+  ]
+ },
+ "Java Backend Developer": {
+  "required": [
+   "Java",
+   "Spring Boot",
+   "SQL",
+   "REST API",
+   "Git",
+   "OOP"
+  ],
+  "nice": [
+   "Hibernate",
+   "Microservices",
+   "Docker",
+   "Maven",
+   "Testing"
+  ]
+ },
+ "Frontend Developer": {
+  "required": [
+   "HTML",
+   "CSS",
+   "JavaScript",
+   "React",
+   "Git"
+  ],
+  "nice": [
+   "TypeScript",
+   "Tailwind CSS",
+   "Testing",
+   "Figma"
+  ]
+ },
+ "Python Backend Developer": {
+  "required": [
+   "Python",
+   "Django",
+   "REST API",
+   "SQL",
+   "Git"
+  ],
+  "nice": [
+   "FastAPI",
+   "Docker",
+   "PostgreSQL",
+   "Testing"
+  ]
+ },
+ "Data Analyst": {
+  "required": [
+   "SQL",
+   "Excel",
+   "Data Analysis",
+   "Data Visualization",
+   "Statistics"
+  ],
+  "nice": [
+   "Python",
+   "Pandas",
+   "Power BI",
+   "Tableau"
+  ]
+ },
+ "Machine Learning Engineer": {
+  "required": [
+   "Python",
+   "Machine Learning",
+   "scikit-learn",
+   "Pandas",
+   "NumPy",
+   "Statistics"
+  ],
+  "nice": [
+   "Deep Learning",
+   "TensorFlow",
+   "PyTorch",
+   "Docker",
+   "NLP"
+  ]
+ },
+ "DevOps Engineer": {
+  "required": [
+   "Linux",
+   "Git",
+   "Docker",
+   "CI/CD",
+   "AWS"
+  ],
+  "nice": [
+   "Kubernetes",
+   "Python",
+   "Azure"
+  ]
+ },
+ "QA / Test Automation Engineer": {
+  "required": [
+   "Testing",
+   "Selenium",
+   "Java",
+   "SQL",
+   "Postman",
+   "Agile"
+  ],
+  "nice": [
+   "CI/CD",
+   "Python",
+   "REST API"
+  ]
+ },
+ "Cloud Engineer": {
+  "required": [
+   "AWS",
+   "Linux",
+   "Docker",
+   "Computer Networks",
+   "Git"
+  ],
+  "nice": [
+   "Kubernetes",
+   "Azure",
+   "CI/CD",
+   "Python"
+  ]
+ },
+ "Software Development Engineer (SDE)": {
+  "required": [
+   "Data Structures",
+   "Algorithms",
+   "OOP",
+   "DBMS",
+   "Operating Systems",
+   "Git"
+  ],
+  "nice": [
+   "System Design",
+   "Java",
+   "Python",
+   "C++"
+  ]
+ },
+ "NLP / AI Engineer": {
+  "required": [
+   "Python",
+   "NLP",
+   "Machine Learning",
+   "Deep Learning",
+   "PyTorch"
+  ],
+  "nice": [
+   "FastAPI",
+   "Docker",
+   "Pandas"
+  ]
+ }
+}

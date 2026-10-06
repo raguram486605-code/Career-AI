@@ -1,0 +1,18 @@
+Lakshmi N
+lakshmi@example.com | +91 98765 43210 | github.com/lakshmi-n | linkedin.com/in/lakshmi-n
+
+SUMMARY
+Final-year B.Tech IT student interested in full-stack development.
+
+SKILLS
+Java, JavaScript, React, Node.js, Express, MongoDB, HTML, CSS, Git
+
+PROJECTS
+Placement Portal - Built a MERN application with React, Node.js, Express and MongoDB. Implemented JWT authentication and REST APIs used by 500+ students.
+Library Management - Java console application using OOP concepts and file handling.
+
+EDUCATION
+B.Tech Information Technology, CGPA: 8.4/10
+
+CERTIFICATIONS
+Oracle Java SE Certification

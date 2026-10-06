@@ -1,0 +1,1216 @@
+{
+ "Java": {
+  "category": "Language",
+  "aliases": [
+   "core java",
+   "java 17",
+   "java 11",
+   "java 8",
+   "java"
+  ],
+  "implies": {
+   "OOP": 0.8
+  },
+  "prereqs": [],
+  "level": 2,
+  "hours": 60,
+  "resource": "https://dev.java/learn/",
+  "caseSensitive": false
+ },
+ "Python": {
+  "category": "Language",
+  "aliases": [
+   "python3",
+   "python"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 1,
+  "hours": 40,
+  "resource": "https://docs.python.org/3/tutorial/",
+  "caseSensitive": false
+ },
+ "JavaScript": {
+  "category": "Language",
+  "aliases": [
+   "ecmascript",
+   "javascript",
+   "es6",
+   "js"
+  ],
+  "implies": {},
+  "prereqs": [
+   "HTML"
+  ],
+  "level": 2,
+  "hours": 50,
+  "resource": "https://javascript.info/",
+  "caseSensitive": false
+ },
+ "TypeScript": {
+  "category": "Language",
+  "aliases": [
+   "typescript",
+   "ts"
+  ],
+  "implies": {
+   "JavaScript": 1.0
+  },
+  "prereqs": [
+   "JavaScript"
+  ],
+  "level": 3,
+  "hours": 25,
+  "resource": "https://www.typescriptlang.org/docs/",
+  "caseSensitive": false
+ },
+ "C": {
+  "category": "Language",
+  "aliases": [
+   "c"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 1,
+  "hours": 40,
+  "resource": "https://www.learn-c.org/",
+  "caseSensitive": true
+ },
+ "C++": {
+  "category": "Language",
+  "aliases": [
+   "cpp",
+   "c++"
+  ],
+  "implies": {
+   "C": 0.7,
+   "OOP": 0.8
+  },
+  "prereqs": [],
+  "level": 2,
+  "hours": 60,
+  "resource": "https://www.learncpp.com/",
+  "caseSensitive": false
+ },
+ "C#": {
+  "category": "Language",
+  "aliases": [
+   "csharp",
+   "c#"
+  ],
+  "implies": {
+   "OOP": 0.8
+  },
+  "prereqs": [],
+  "level": 2,
+  "hours": 50,
+  "resource": "https://learn.microsoft.com/dotnet/csharp/",
+  "caseSensitive": false
+ },
+ "Go": {
+  "category": "Language",
+  "aliases": [
+   "go lang",
+   "golang",
+   "go"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 3,
+  "hours": 40,
+  "resource": "https://go.dev/tour/",
+  "caseSensitive": true
+ },
+ "PHP": {
+  "category": "Language",
+  "aliases": [
+   "php"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 2,
+  "hours": 40,
+  "resource": "https://www.php.net/manual/en/",
+  "caseSensitive": false
+ },
+ "Kotlin": {
+  "category": "Language",
+  "aliases": [
+   "kotlin"
+  ],
+  "implies": {
+   "Java": 0.4
+  },
+  "prereqs": [],
+  "level": 3,
+  "hours": 35,
+  "resource": "https://kotlinlang.org/docs/home.html",
+  "caseSensitive": false
+ },
+ "HTML": {
+  "category": "Web",
+  "aliases": [
+   "html5",
+   "html"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 1,
+  "hours": 10,
+  "resource": "https://developer.mozilla.org/docs/Learn/HTML",
+  "caseSensitive": false
+ },
+ "CSS": {
+  "category": "Web",
+  "aliases": [
+   "css3",
+   "css"
+  ],
+  "implies": {
+   "HTML": 0.5
+  },
+  "prereqs": [
+   "HTML"
+  ],
+  "level": 1,
+  "hours": 15,
+  "resource": "https://developer.mozilla.org/docs/Learn/CSS",
+  "caseSensitive": false
+ },
+ "React": {
+  "category": "Frontend",
+  "aliases": [
+   "react.js",
+   "react js",
+   "reactjs",
+   "react"
+  ],
+  "implies": {
+   "JavaScript": 1.0,
+   "HTML": 0.6,
+   "CSS": 0.6
+  },
+  "prereqs": [
+   "JavaScript"
+  ],
+  "level": 3,
+  "hours": 50,
+  "resource": "https://react.dev/learn",
+  "caseSensitive": false
+ },
+ "Angular": {
+  "category": "Frontend",
+  "aliases": [
+   "angularjs",
+   "angular"
+  ],
+  "implies": {
+   "TypeScript": 0.9,
+   "JavaScript": 0.9,
+   "HTML": 0.6
+  },
+  "prereqs": [
+   "TypeScript"
+  ],
+  "level": 3,
+  "hours": 60,
+  "resource": "https://angular.dev/tutorials",
+  "caseSensitive": false
+ },
+ "Vue.js": {
+  "category": "Frontend",
+  "aliases": [
+   "vue.js",
+   "vuejs",
+   "vue"
+  ],
+  "implies": {
+   "JavaScript": 1.0,
+   "HTML": 0.6
+  },
+  "prereqs": [
+   "JavaScript"
+  ],
+  "level": 3,
+  "hours": 40,
+  "resource": "https://vuejs.org/tutorial/",
+  "caseSensitive": false
+ },
+ "Next.js": {
+  "category": "Frontend",
+  "aliases": [
+   "next.js",
+   "next js",
+   "nextjs"
+  ],
+  "implies": {
+   "React": 1.0,
+   "JavaScript": 1.0
+  },
+  "prereqs": [
+   "React"
+  ],
+  "level": 4,
+  "hours": 30,
+  "resource": "https://nextjs.org/learn",
+  "caseSensitive": false
+ },
+ "Tailwind CSS": {
+  "category": "Frontend",
+  "aliases": [
+   "tailwind css",
+   "tailwindcss",
+   "tailwind"
+  ],
+  "implies": {
+   "CSS": 0.8
+  },
+  "prereqs": [
+   "CSS"
+  ],
+  "level": 2,
+  "hours": 10,
+  "resource": "https://tailwindcss.com/docs",
+  "caseSensitive": false
+ },
+ "Bootstrap": {
+  "category": "Frontend",
+  "aliases": [
+   "bootstrap"
+  ],
+  "implies": {
+   "CSS": 0.6,
+   "HTML": 0.6
+  },
+  "prereqs": [
+   "CSS"
+  ],
+  "level": 1,
+  "hours": 10,
+  "resource": "https://getbootstrap.com/docs/",
+  "caseSensitive": false
+ },
+ "Node.js": {
+  "category": "Backend",
+  "aliases": [
+   "node js",
+   "node.js",
+   "nodejs",
+   "node"
+  ],
+  "implies": {
+   "JavaScript": 1.0
+  },
+  "prereqs": [
+   "JavaScript"
+  ],
+  "level": 3,
+  "hours": 40,
+  "resource": "https://nodejs.org/en/learn",
+  "caseSensitive": false
+ },
+ "Express.js": {
+  "category": "Backend",
+  "aliases": [
+   "express.js",
+   "expressjs",
+   "express"
+  ],
+  "implies": {
+   "Node.js": 1.0,
+   "JavaScript": 1.0,
+   "REST API": 0.7
+  },
+  "prereqs": [
+   "Node.js"
+  ],
+  "level": 3,
+  "hours": 20,
+  "resource": "https://expressjs.com/en/starter/installing.html",
+  "caseSensitive": false
+ },
+ "Spring Boot": {
+  "category": "Backend",
+  "aliases": [
+   "spring framework",
+   "spring boot",
+   "spring mvc",
+   "springboot",
+   "spring"
+  ],
+  "implies": {
+   "Java": 1.0,
+   "REST API": 0.7,
+   "OOP": 0.8
+  },
+  "prereqs": [
+   "Java",
+   "REST API",
+   "SQL"
+  ],
+  "level": 4,
+  "hours": 60,
+  "resource": "https://spring.io/guides",
+  "caseSensitive": false
+ },
+ "Hibernate": {
+  "category": "Backend",
+  "aliases": [
+   "spring data jpa",
+   "hibernate",
+   "jpa"
+  ],
+  "implies": {
+   "Java": 1.0,
+   "SQL": 0.4
+  },
+  "prereqs": [
+   "Java",
+   "SQL"
+  ],
+  "level": 4,
+  "hours": 25,
+  "resource": "https://hibernate.org/orm/documentation/",
+  "caseSensitive": false
+ },
+ "Django": {
+  "category": "Backend",
+  "aliases": [
+   "django"
+  ],
+  "implies": {
+   "Python": 1.0,
+   "REST API": 0.4
+  },
+  "prereqs": [
+   "Python"
+  ],
+  "level": 3,
+  "hours": 45,
+  "resource": "https://docs.djangoproject.com/en/stable/intro/tutorial01/",
+  "caseSensitive": false
+ },
+ "Flask": {
+  "category": "Backend",
+  "aliases": [
+   "flask"
+  ],
+  "implies": {
+   "Python": 1.0,
+   "REST API": 0.5
+  },
+  "prereqs": [
+   "Python"
+  ],
+  "level": 3,
+  "hours": 25,
+  "resource": "https://flask.palletsprojects.com/en/stable/tutorial/",
+  "caseSensitive": false
+ },
+ "FastAPI": {
+  "category": "Backend",
+  "aliases": [
+   "fast api",
+   "fastapi"
+  ],
+  "implies": {
+   "Python": 1.0,
+   "REST API": 0.8
+  },
+  "prereqs": [
+   "Python"
+  ],
+  "level": 3,
+  "hours": 20,
+  "resource": "https://fastapi.tiangolo.com/tutorial/",
+  "caseSensitive": false
+ },
+ ".NET": {
+  "category": "Backend",
+  "aliases": [
+   ".net core",
+   "asp.net",
+   "dotnet",
+   ".net"
+  ],
+  "implies": {
+   "C#": 0.9
+  },
+  "prereqs": [
+   "C#"
+  ],
+  "level": 4,
+  "hours": 60,
+  "resource": "https://learn.microsoft.com/dotnet/",
+  "caseSensitive": false
+ },
+ "SQL": {
+  "category": "Database",
+  "aliases": [
+   "structured query language",
+   "pl/sql",
+   "rdbms",
+   "plsql",
+   "tsql",
+   "sql"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 2,
+  "hours": 30,
+  "resource": "https://www.w3schools.com/sql/",
+  "caseSensitive": false
+ },
+ "MySQL": {
+  "category": "Database",
+  "aliases": [
+   "mysql"
+  ],
+  "implies": {
+   "SQL": 0.9
+  },
+  "prereqs": [
+   "SQL"
+  ],
+  "level": 2,
+  "hours": 15,
+  "resource": "https://dev.mysql.com/doc/",
+  "caseSensitive": false
+ },
+ "PostgreSQL": {
+  "category": "Database",
+  "aliases": [
+   "postgresql",
+   "postgres",
+   "psql"
+  ],
+  "implies": {
+   "SQL": 0.9
+  },
+  "prereqs": [
+   "SQL"
+  ],
+  "level": 2,
+  "hours": 20,
+  "resource": "https://www.postgresql.org/docs/current/tutorial.html",
+  "caseSensitive": false
+ },
+ "MongoDB": {
+  "category": "Database",
+  "aliases": [
+   "mongoose",
+   "mongodb",
+   "mongo",
+   "nosql"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 2,
+  "hours": 20,
+  "resource": "https://learn.mongodb.com/",
+  "caseSensitive": false
+ },
+ "Redis": {
+  "category": "Database",
+  "aliases": [
+   "redis"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 3,
+  "hours": 10,
+  "resource": "https://redis.io/docs/",
+  "caseSensitive": false
+ },
+ "Firebase": {
+  "category": "Database",
+  "aliases": [
+   "firestore",
+   "firebase"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 2,
+  "hours": 15,
+  "resource": "https://firebase.google.com/docs",
+  "caseSensitive": false
+ },
+ "REST API": {
+  "category": "Backend",
+  "aliases": [
+   "api development",
+   "restful apis",
+   "web services",
+   "restful api",
+   "rest apis",
+   "rest api",
+   "restful",
+   "rest"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 2,
+  "hours": 20,
+  "resource": "https://restfulapi.net/",
+  "caseSensitive": false
+ },
+ "GraphQL": {
+  "category": "Backend",
+  "aliases": [
+   "graphql"
+  ],
+  "implies": {
+   "REST API": 0.4
+  },
+  "prereqs": [
+   "REST API"
+  ],
+  "level": 4,
+  "hours": 20,
+  "resource": "https://graphql.org/learn/",
+  "caseSensitive": false
+ },
+ "Git": {
+  "category": "Tools",
+  "aliases": [
+   "version control",
+   "bitbucket",
+   "gitlab",
+   "git"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 1,
+  "hours": 8,
+  "resource": "https://git-scm.com/doc",
+  "caseSensitive": false
+ },
+ "GitHub": {
+  "category": "Tools",
+  "aliases": [
+   "github.com",
+   "github"
+  ],
+  "implies": {
+   "Git": 0.8
+  },
+  "prereqs": [],
+  "level": 1,
+  "hours": 4,
+  "resource": "https://docs.github.com/get-started",
+  "caseSensitive": false
+ },
+ "Docker": {
+  "category": "DevOps",
+  "aliases": [
+   "containerization",
+   "dockerfile",
+   "docker"
+  ],
+  "implies": {},
+  "prereqs": [
+   "Linux"
+  ],
+  "level": 3,
+  "hours": 20,
+  "resource": "https://docs.docker.com/get-started/",
+  "caseSensitive": false
+ },
+ "Kubernetes": {
+  "category": "DevOps",
+  "aliases": [
+   "kubernetes",
+   "k8s"
+  ],
+  "implies": {
+   "Docker": 0.4
+  },
+  "prereqs": [
+   "Docker"
+  ],
+  "level": 4,
+  "hours": 40,
+  "resource": "https://kubernetes.io/docs/tutorials/",
+  "caseSensitive": false
+ },
+ "AWS": {
+  "category": "Cloud",
+  "aliases": [
+   "amazon web services",
+   "lambda",
+   "aws",
+   "ec2",
+   "s3"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 3,
+  "hours": 40,
+  "resource": "https://aws.amazon.com/getting-started/",
+  "caseSensitive": false
+ },
+ "Azure": {
+  "category": "Cloud",
+  "aliases": [
+   "microsoft azure",
+   "azure"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 3,
+  "hours": 40,
+  "resource": "https://learn.microsoft.com/azure/",
+  "caseSensitive": false
+ },
+ "CI/CD": {
+  "category": "DevOps",
+  "aliases": [
+   "continuous integration",
+   "github actions",
+   "gitlab ci",
+   "jenkins",
+   "ci/cd",
+   "cicd"
+  ],
+  "implies": {
+   "Git": 0.5
+  },
+  "prereqs": [
+   "Git"
+  ],
+  "level": 3,
+  "hours": 15,
+  "resource": "https://docs.github.com/actions",
+  "caseSensitive": false
+ },
+ "Linux": {
+  "category": "Tools",
+  "aliases": [
+   "shell scripting",
+   "ubuntu",
+   "linux",
+   "unix",
+   "bash"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 2,
+  "hours": 20,
+  "resource": "https://linuxjourney.com/",
+  "caseSensitive": false
+ },
+ "Data Structures": {
+  "category": "CS Fundamentals",
+  "aliases": [
+   "data structures and algorithms",
+   "data structures",
+   "dsa"
+  ],
+  "implies": {
+   "Algorithms": 0.7
+  },
+  "prereqs": [],
+  "level": 2,
+  "hours": 80,
+  "resource": "https://neetcode.io/roadmap",
+  "caseSensitive": false
+ },
+ "Algorithms": {
+  "category": "CS Fundamentals",
+  "aliases": [
+   "competitive programming",
+   "algorithm design",
+   "problem solving",
+   "algorithms",
+   "leetcode"
+  ],
+  "implies": {
+   "Data Structures": 0.5
+  },
+  "prereqs": [],
+  "level": 2,
+  "hours": 60,
+  "resource": "https://neetcode.io/roadmap",
+  "caseSensitive": false
+ },
+ "OOP": {
+  "category": "CS Fundamentals",
+  "aliases": [
+   "object-oriented programming",
+   "object oriented programming",
+   "object oriented",
+   "oops",
+   "oop"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 1,
+  "hours": 15,
+  "resource": "https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/",
+  "caseSensitive": false
+ },
+ "DBMS": {
+  "category": "CS Fundamentals",
+  "aliases": [
+   "database management systems",
+   "database management",
+   "normalization",
+   "dbms"
+  ],
+  "implies": {
+   "SQL": 0.5
+  },
+  "prereqs": [],
+  "level": 2,
+  "hours": 20,
+  "resource": "https://www.geeksforgeeks.org/dbms/",
+  "caseSensitive": false
+ },
+ "Operating Systems": {
+  "category": "CS Fundamentals",
+  "aliases": [
+   "operating systems",
+   "os concepts"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 2,
+  "hours": 25,
+  "resource": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+  "caseSensitive": false
+ },
+ "Computer Networks": {
+  "category": "CS Fundamentals",
+  "aliases": [
+   "computer networks",
+   "networking",
+   "tcp/ip"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 2,
+  "hours": 25,
+  "resource": "https://www.geeksforgeeks.org/computer-network-tutorials/",
+  "caseSensitive": false
+ },
+ "System Design": {
+  "category": "CS Fundamentals",
+  "aliases": [
+   "high level design",
+   "low level design",
+   "system design",
+   "hld",
+   "lld"
+  ],
+  "implies": {},
+  "prereqs": [
+   "REST API",
+   "SQL"
+  ],
+  "level": 5,
+  "hours": 50,
+  "resource": "https://github.com/donnemartin/system-design-primer",
+  "caseSensitive": false
+ },
+ "Microservices": {
+  "category": "Backend",
+  "aliases": [
+   "microservice architecture",
+   "microservices"
+  ],
+  "implies": {
+   "REST API": 0.5
+  },
+  "prereqs": [
+   "REST API",
+   "Docker"
+  ],
+  "level": 4,
+  "hours": 30,
+  "resource": "https://microservices.io/",
+  "caseSensitive": false
+ },
+ "JWT": {
+  "category": "Security",
+  "aliases": [
+   "json web tokens",
+   "json web token",
+   "jwt"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 2,
+  "hours": 6,
+  "resource": "https://jwt.io/introduction",
+  "caseSensitive": false
+ },
+ "Authentication": {
+  "category": "Security",
+  "aliases": [
+   "authentication",
+   "authorization",
+   "oauth2",
+   "oauth",
+   "rbac"
+  ],
+  "implies": {
+   "JWT": 0.3
+  },
+  "prereqs": [],
+  "level": 2,
+  "hours": 10,
+  "resource": "https://cheatsheetseries.owasp.org/",
+  "caseSensitive": false
+ },
+ "Testing": {
+  "category": "Quality",
+  "aliases": [
+   "test driven development",
+   "unit testing",
+   "testing",
+   "pytest",
+   "mocha",
+   "junit",
+   "jest",
+   "tdd"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 2,
+  "hours": 15,
+  "resource": "https://martinfowler.com/testing/",
+  "caseSensitive": false
+ },
+ "Selenium": {
+  "category": "Quality",
+  "aliases": [
+   "test automation",
+   "playwright",
+   "selenium",
+   "cypress"
+  ],
+  "implies": {
+   "Testing": 0.7
+  },
+  "prereqs": [
+   "Testing"
+  ],
+  "level": 3,
+  "hours": 25,
+  "resource": "https://www.selenium.dev/documentation/",
+  "caseSensitive": false
+ },
+ "Postman": {
+  "category": "Tools",
+  "aliases": [
+   "openapi",
+   "swagger",
+   "postman"
+  ],
+  "implies": {
+   "REST API": 0.4
+  },
+  "prereqs": [],
+  "level": 1,
+  "hours": 4,
+  "resource": "https://learning.postman.com/docs/",
+  "caseSensitive": false
+ },
+ "Maven": {
+  "category": "Tools",
+  "aliases": [
+   "gradle",
+   "maven"
+  ],
+  "implies": {
+   "Java": 0.6
+  },
+  "prereqs": [
+   "Java"
+  ],
+  "level": 2,
+  "hours": 6,
+  "resource": "https://maven.apache.org/guides/getting-started/",
+  "caseSensitive": false
+ },
+ "Agile": {
+  "category": "Process",
+  "aliases": [
+   "kanban",
+   "agile",
+   "scrum",
+   "jira"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 1,
+  "hours": 5,
+  "resource": "https://www.atlassian.com/agile",
+  "caseSensitive": false
+ },
+ "Figma": {
+  "category": "Design",
+  "aliases": [
+   "wireframing",
+   "ux design",
+   "figma",
+   "ui/ux"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 1,
+  "hours": 12,
+  "resource": "https://help.figma.com/",
+  "caseSensitive": false
+ },
+ "Machine Learning": {
+  "category": "AI/ML",
+  "aliases": [
+   "unsupervised learning",
+   "supervised learning",
+   "machine learning",
+   "ml"
+  ],
+  "implies": {
+   "Python": 0.5,
+   "Statistics": 0.4
+  },
+  "prereqs": [
+   "Python",
+   "Statistics"
+  ],
+  "level": 4,
+  "hours": 80,
+  "resource": "https://www.coursera.org/learn/machine-learning",
+  "caseSensitive": false
+ },
+ "Deep Learning": {
+  "category": "AI/ML",
+  "aliases": [
+   "neural networks",
+   "deep learning",
+   "transformers",
+   "lstm",
+   "rnn",
+   "cnn"
+  ],
+  "implies": {
+   "Machine Learning": 0.8
+  },
+  "prereqs": [
+   "Machine Learning"
+  ],
+  "level": 5,
+  "hours": 80,
+  "resource": "https://www.deeplearning.ai/",
+  "caseSensitive": false
+ },
+ "NLP": {
+  "category": "AI/ML",
+  "aliases": [
+   "natural language processing",
+   "text mining",
+   "spacy",
+   "bert",
+   "nltk",
+   "nlp"
+  ],
+  "implies": {
+   "Machine Learning": 0.5,
+   "Python": 0.5
+  },
+  "prereqs": [
+   "Machine Learning"
+  ],
+  "level": 5,
+  "hours": 50,
+  "resource": "https://huggingface.co/learn/nlp-course",
+  "caseSensitive": false
+ },
+ "Pandas": {
+  "category": "Data",
+  "aliases": [
+   "pandas"
+  ],
+  "implies": {
+   "Python": 0.9,
+   "Data Analysis": 0.6
+  },
+  "prereqs": [
+   "Python"
+  ],
+  "level": 2,
+  "hours": 20,
+  "resource": "https://pandas.pydata.org/docs/getting_started/",
+  "caseSensitive": false
+ },
+ "NumPy": {
+  "category": "Data",
+  "aliases": [
+   "numpy"
+  ],
+  "implies": {
+   "Python": 0.9
+  },
+  "prereqs": [
+   "Python"
+  ],
+  "level": 2,
+  "hours": 12,
+  "resource": "https://numpy.org/learn/",
+  "caseSensitive": false
+ },
+ "scikit-learn": {
+  "category": "AI/ML",
+  "aliases": [
+   "scikit learn",
+   "scikit-learn",
+   "sklearn"
+  ],
+  "implies": {
+   "Python": 0.9,
+   "Machine Learning": 0.7
+  },
+  "prereqs": [
+   "Python"
+  ],
+  "level": 4,
+  "hours": 25,
+  "resource": "https://scikit-learn.org/stable/user_guide.html",
+  "caseSensitive": false
+ },
+ "TensorFlow": {
+  "category": "AI/ML",
+  "aliases": [
+   "tensorflow",
+   "keras"
+  ],
+  "implies": {
+   "Python": 0.9,
+   "Deep Learning": 0.7,
+   "Machine Learning": 0.7
+  },
+  "prereqs": [
+   "Machine Learning"
+  ],
+  "level": 5,
+  "hours": 40,
+  "resource": "https://www.tensorflow.org/tutorials",
+  "caseSensitive": false
+ },
+ "PyTorch": {
+  "category": "AI/ML",
+  "aliases": [
+   "pytorch",
+   "torch"
+  ],
+  "implies": {
+   "Python": 0.9,
+   "Deep Learning": 0.7,
+   "Machine Learning": 0.7
+  },
+  "prereqs": [
+   "Machine Learning"
+  ],
+  "level": 5,
+  "hours": 40,
+  "resource": "https://pytorch.org/tutorials/",
+  "caseSensitive": false
+ },
+ "Statistics": {
+  "category": "Data",
+  "aliases": [
+   "hypothesis testing",
+   "probability",
+   "statistics"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 2,
+  "hours": 30,
+  "resource": "https://www.khanacademy.org/math/statistics-probability",
+  "caseSensitive": false
+ },
+ "Data Analysis": {
+  "category": "Data",
+  "aliases": [
+   "exploratory data analysis",
+   "data analytics",
+   "data analysis",
+   "data cleaning",
+   "eda"
+  ],
+  "implies": {
+   "Statistics": 0.3
+  },
+  "prereqs": [],
+  "level": 2,
+  "hours": 25,
+  "resource": "https://www.kaggle.com/learn",
+  "caseSensitive": false
+ },
+ "Data Visualization": {
+  "category": "Data",
+  "aliases": [
+   "data visualization",
+   "matplotlib",
+   "recharts",
+   "seaborn",
+   "plotly"
+  ],
+  "implies": {},
+  "prereqs": [],
+  "level": 2,
+  "hours": 12,
+  "resource": "https://www.kaggle.com/learn/data-visualization",
+  "caseSensitive": false
+ },
+ "Power BI": {
+  "category": "Data",
+  "aliases": [
+   "power bi",
+   "powerbi"
+  ],
+  "implies": {
+   "Data Visualization": 0.8,
+   "Data Analysis": 0.5
+  },
+  "prereqs": [],
+  "level": 2,
+  "hours": 20,
+  "resource": "https://learn.microsoft.com/power-bi/",
+  "caseSensitive": false
+ },
+ "Tableau": {
+  "category": "Data",
+  "aliases": [
+   "tableau"
+  ],
+  "implies": {
+   "Data Visualization": 0.8,
+   "Data Analysis": 0.5
+  },
+  "prereqs": [],
+  "level": 2,
+  "hours": 20,
+  "resource": "https://www.tableau.com/learn/training",
+  "caseSensitive": false
+ },
+ "Excel": {
+  "category": "Data",
+  "aliases": [
+   "microsoft excel",
+   "advanced excel",
+   "ms excel",
+   "excel"
+  ],
+  "implies": {
+   "Data Analysis": 0.4
+  },
+  "prereqs": [],
+  "level": 1,
+  "hours": 15,
+  "resource": "https://support.microsoft.com/excel",
+  "caseSensitive": false
+ }
+}
