@@ -6,6 +6,8 @@ const student = require('../controllers/student');
 const roadmap = require('../controllers/roadmap');
 const interview = require('../controllers/interview');
 const admin = require('../controllers/admin');
+const company = require('../controllers/company');
+const resume = require('../controllers/resume');
 const ai = require('../services/aiClient');
 
 router.get('/health', async (req, res) => {
@@ -39,6 +41,9 @@ router.delete('/roadmaps/:id', ...S, roadmap.remove);
 router.post('/interviews', ...S, interview.start);
 router.get('/interviews', ...S, interview.list);
 router.get('/interviews/:id', ...S, interview.get);
+router.post('/interviews/:id/start-test', ...S, interview.startTest);
+router.post('/interviews/:id/terminate', ...S, interview.terminate);
+router.post('/interviews/:id/retake-request', ...S, interview.submitRetakeRequest);
 router.post('/interviews/:id/answer', ...S, interview.answer);
 
 // Admin
@@ -58,10 +63,20 @@ router.patch('/admin/applications/:id/status', ...A, admin.setStatus);
 router.get('/admin/shortlisted', ...A, admin.shortlisted);
 router.get('/admin/reports/students.csv', ...A, admin.studentsReport);
 router.get('/admin/reports/applications.csv', ...A, admin.applicationsReport);
-router.get('/admin/reports/shortlisted.csv', ...A, admin.shortlistReport);
+// Resume Viewing & Downloading (Company, Admin, and Student)
+router.get('/resumes/:studentId', protect, resume.getResume);
+router.get('/resumes/:studentId/download', protect, resume.downloadResume);
 
-// Company Recruiter Endpoints
-router.get('/company/jobs/:id/matches', protect, admin.jobMatches);
-router.patch('/company/applications/:id/status', protect, admin.setStatus);
+// Company Recruiter Endpoints (Jobs CRUD, Applicants CSV, Shortlisting, Interviews)
+const C = [protect, requireRole('company')];
+router.get('/company/jobs', protect, company.listJobs);
+router.post('/company/jobs', ...C, company.createJob);
+router.put('/company/jobs/:id', ...C, company.updateJob);
+router.delete('/company/jobs/:id', ...C, company.deleteJob);
+router.get('/company/reports/applicants.csv', protect, company.exportApplicants);
+router.get('/company/jobs/:id/matches', protect, company.jobMatches);
+router.patch('/company/applications/:id/status', protect, company.setStatus);
+router.post('/company/applications/:id/interview-rounds', protect, company.createInterviewRound);
+router.post('/company/applications/:id/interview-rounds/:roundId/retake-review', protect, company.reviewRetakeRequest);
 
 module.exports = router;

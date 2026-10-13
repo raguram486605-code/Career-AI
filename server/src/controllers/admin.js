@@ -90,6 +90,7 @@ exports.jobMatches = h(async (req, res) => {
       score: m.score, breakdown: m.breakdown, matched: m.matchedSkills, missing: m.missingSkills,
       eligible: el.ok, eligibilityNotes: el.reasons,
       applicationId: app?._id || null, status: app?.status || null,
+      interviewRounds: app?.interviewRounds || [],
     };
   });
   let out = rows;
@@ -106,8 +107,11 @@ exports.jobApplicants = h(async (req, res) => {
   res.json({ applicants: apps.map(a => ({ ...a.toObject(), branch: pm[String(a.studentId._id)]?.branch, cgpa: pm[String(a.studentId._id)]?.cgpa })) });
 });
 
-// Shortlist / reject / select. For a student who hasn't applied, admin can add them (shortlist directly).
+// Candidate recruitment action: Only company users can modify status and create interviews
 exports.setStatus = h(async (req, res) => {
+  if (req.user.role === 'admin') {
+    return res.status(403).json({ message: 'Candidate status and interview rounds are editable by company users only.' });
+  }
   const { status, studentId, jobId } = req.body;
   if (!['applied', 'shortlisted', 'rejected', 'selected'].includes(status)) return res.status(400).json({ message: 'Invalid status' });
   let app = req.params.id !== 'new' ? await Application.findById(req.params.id) : null;

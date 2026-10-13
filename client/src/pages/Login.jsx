@@ -38,7 +38,7 @@ export default function Login() {
   const { login } = useAuth();
   const nav = useNavigate();
   const [selectedRole, setSelectedRole] = useState('student');
-  const [f, setF] = useState({ email: 'lakshmi@college.edu', password: 'password123' });
+  const [f, setF] = useState({ email: '', password: '' });
   const [isCompanyRequesting, setIsCompanyRequesting] = useState(false);
   const [compReq, setCompReq] = useState({ companyName: '', contactName: '', contactEmail: '', password: '', industry: 'Software', location: 'Chennai' });
   const [msg, setMsg] = useState('');
@@ -48,7 +48,7 @@ export default function Login() {
   const selectOption = (opt) => {
     setSelectedRole(opt.id);
     setIsCompanyRequesting(false);
-    setF({ email: opt.defaultEmail, password: opt.defaultPassword });
+    setF({ email: '', password: '' });
     setErr('');
     setMsg('');
   };
@@ -180,18 +180,31 @@ export default function Login() {
                 className="input mb-3"
                 type="email"
                 required
+                placeholder="Enter your mail"
                 value={f.email}
                 onChange={(e) => setF({ ...f, email: e.target.value })}
               />
 
               <label className="label">Password</label>
               <input
-                className="input mb-5"
+                className="input mb-3"
                 type="password"
                 required
+                placeholder="Enter your password"
                 value={f.password}
                 onChange={(e) => setF({ ...f, password: e.target.value })}
               />
+
+              <div className="flex items-center justify-between text-xs text-zinc-500 mb-4 px-1">
+                <span>Demo account hint:</span>
+                <button
+                  type="button"
+                  onClick={() => setF({ email: activeOption.defaultEmail, password: activeOption.defaultPassword })}
+                  className="text-zinc-400 hover:text-red-400 underline underline-offset-2 transition-colors cursor-pointer"
+                >
+                  Fill {activeOption.title} demo credentials
+                </button>
+              </div>
 
               <button className="btn-primary w-full py-2.5" disabled={busy}>
                 {busy ? 'Signing in...' : `Sign in as ${activeOption.title}`}

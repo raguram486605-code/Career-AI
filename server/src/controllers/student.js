@@ -43,6 +43,8 @@ exports.uploadResume = h(async (req, res) => {
     text: parsed.rawText, projectsText: parsed.projectsText, hasGithub: parsed.hasGithub,
     quality: { score: parsed.quality.score, suggestions: parsed.quality.suggestions },
     skillEvidence: parsed.skillEvidence || {},
+    fileData: req.file.buffer ? req.file.buffer.toString('base64') : null,
+    mimeType: req.file.mimetype || 'application/octet-stream',
   };
   await p.save();
   await snapshot(req.user._id, 'resume_upload');

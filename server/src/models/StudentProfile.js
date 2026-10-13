@@ -12,6 +12,8 @@ const schema = new mongoose.Schema({
     text: String, projectsText: String, hasGithub: Boolean,
     quality: { score: Number, suggestions: [String] },
     skillEvidence: Object,
+    fileData: String,
+    mimeType: String,
   },
 }, { timestamps: true });
 module.exports = mongoose.model('StudentProfile', schema);

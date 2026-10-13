@@ -1,3 +1,4 @@
+
 """FastAPI AI service: parsing, skill extraction, matching, roadmap, interview."""
 from typing import List, Optional
 from fastapi import FastAPI, File, HTTPException, UploadFile
@@ -45,9 +46,9 @@ class RoadmapIn(BaseModel):
 
 
 class QuestionsIn(BaseModel):
-    type: str = "technical"          # technical | hr
+    type: str = "technical"          # technical | hr | aptitude
     skills: List[str] = []
-    count: int = Field(6, ge=1, le=15)
+    count: int = Field(6, ge=1, le=100)
 
 
 class EvalIn(BaseModel):

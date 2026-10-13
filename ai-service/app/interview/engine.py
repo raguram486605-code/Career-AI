@@ -1,23 +1,31 @@
 """Question selection and answer evaluation for Choice-Filling (MCQ) interview practice."""
 import random
 from ..skills.ontology import canonical_list
-from .bank import TECH, GENERIC_TECH, HR
+from .bank import TECH, GENERIC_TECH, HR, APTITUDE
 
 
 def build_questions(kind: str, skills=None, count: int = 5, seed=None) -> list:
     """Returns a randomized set of choice-filling (MCQ) questions every time."""
-    # If seed is explicitly provided, use it; otherwise use random.Random() for fresh sampling every time
     rnd = random.Random(seed) if seed is not None else random.Random()
     pool = []
     if kind == "hr":
         pool = [dict(q, category="HR") for q in HR]
+    elif kind == "aptitude":
+        pool = [dict(q, category=q.get("category", "Aptitude")) for q in APTITUDE]
     else:
-        for s in canonical_list(skills or []):
+        # Technical Quiz: prioritize job skills, then expand to all available technical categories
+        c_skills = canonical_list(skills or [])
+        for s in c_skills:
             for q in TECH.get(s, []):
                 pool.append(dict(q, category=s))
+        # Add general technical and remaining topics to fulfill requested count
+        for cat, q_list in TECH.items():
+            if cat not in c_skills:
+                for q in q_list:
+                    pool.append(dict(q, category=cat))
         pool += [dict(q, category="General") for q in GENERIC_TECH]
 
-    # Deduplicate pool by question text while preserving options & correct metadata
+    # Deduplicate pool by question text
     unique_pool = []
     seen = set()
     for q in pool:
@@ -28,15 +36,17 @@ def build_questions(kind: str, skills=None, count: int = 5, seed=None) -> list:
     rnd.shuffle(unique_pool)
 
     # Pick with category diversity
+    max_per_cat = max(3, count // 3)
     picked, per = [], {}
     for q in unique_pool:
-        if per.get(q["category"], 0) < 3:
+        cat = q.get("category", "General")
+        if per.get(cat, 0) < max_per_cat:
             picked.append(q)
-            per[q["category"]] = per.get(q["category"], 0) + 1
+            per[cat] = per.get(cat, 0) + 1
         if len(picked) >= count:
             break
 
-    # If count not met, fill from remaining
+    # If count not met, fill from remaining unique questions
     if len(picked) < count:
         for q in unique_pool:
             if q not in picked:
@@ -44,17 +54,33 @@ def build_questions(kind: str, skills=None, count: int = 5, seed=None) -> list:
             if len(picked) >= count:
                 break
 
-    return [
-        {
+    # If pool is smaller than count, wrap around to guarantee exact count
+    idx = 0
+    while len(picked) < count and unique_pool:
+        picked.append(dict(unique_pool[idx % len(unique_pool)]))
+        idx += 1
+
+    final_picked = picked[:count]
+    rnd.shuffle(final_picked)
+
+    out = []
+    for i, q in enumerate(final_picked):
+        opts = list(q["options"])
+        correct_text = opts[q["correct"]] if 0 <= q["correct"] < len(opts) else opts[0]
+        # Shuffle option order so choices (A, B, C, D) are not in identical arrangement
+        rnd.shuffle(opts)
+        new_correct_idx = opts.index(correct_text) if correct_text in opts else 0
+
+        out.append({
             "id": i,
             "question": q["q"],
-            "category": q["category"],
-            "options": q["options"],
-            "correctOption": q["correct"],
+            "category": q.get("category", "General"),
+            "options": opts,
+            "correctOption": new_correct_idx,
             "explanation": q["explanation"]
-        }
-        for i, q in enumerate(picked)
-    ]
+        })
+
+    return out
 
 
 def evaluate_answer(selected_option: int, correct_option: int, options: list, explanation: str) -> dict:
